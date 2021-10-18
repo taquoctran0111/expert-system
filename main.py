@@ -42,6 +42,7 @@ def test_one_case(rules, facts):
         if (match_rule(facts, rule)):
             print('Match rule: ' + str(rule['IF']) + str(rule['THEN']))
             conclusions = rule['THEN']
+            print("LOG: ", conclusions.keys())
             if 'Max' in conclusions.keys():
                 # print('Max ' + str(conclusions['Max']))
                 Max = min(Max, conclusions['Max'])
